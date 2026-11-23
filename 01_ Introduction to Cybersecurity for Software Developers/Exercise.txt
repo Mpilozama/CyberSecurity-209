@@ -1,0 +1,68 @@
+# MODULE 209 — CYBERSECURITY
+## CASE STUDY: BASE44 API VULNERABILITY INCIDENT
+
+**Student:** __________________________
+
+**Date:** __________________________
+
+---
+
+## CASE STUDY BACKGROUND
+
+**What is Base44?**
+
+Base44 is an AI-powered software development platform that allows users to build applications.
+
+**What happened?**
+
+In July 2025, cybersecurity researchers at Wiz discovered a vulnerability in Base44's API.
+
+The vulnerability involved the user registration process for private applications. Someone who knew a publicly visible application ID could potentially register an account and access an application without proper authorisation.
+
+The vulnerability was reported and subsequently fixed.
+
+**Research source:**  
+https://www.wiz.io/blog/critical-vulnerability-base44
+
+---
+
+# QUESTION 1: TRACE THE ROOT CAUSE
+
+**Original task:**
+
+Identify and explain the specific developer actions or design decisions during the software development lifecycle that led to the exposure of private enterprise applications via publicly visible app IDs.
+
+### My answer:
+
+[Write your answer here.]
+
+---
+
+# QUESTION 2: RECOMMEND SECURE PRACTICES
+
+**Original task:**
+
+Compile a detailed list of secure development practices — such as input validation, access control, and secure API design — that could have prevented the breach.
+
+### My answer:
+
+[Write your answer here.]
+
+---
+
+# QUESTION 3: DEVELOPER ACCOUNTABILITY
+
+**Original task:**
+
+Articulate how developer responsibility influences an organization's overall security posture. Consider the ethical and operational implications of insecure coding decisions.
+
+### My answer:
+
+[Write your answer here.]
+
+---
+
+# REFERENCES
+
+1. Wiz Research — Critical Vulnerability in Base44 API.
+   https://www.wiz.io/blog/critical-vulnerability-base44
