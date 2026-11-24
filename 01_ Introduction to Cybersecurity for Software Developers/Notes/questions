@@ -1,0 +1,104 @@
+# Pasted Content
+
+> Compiled from a source-linked SaralAI Learning Pack without another AI generation call.
+
+## Vocabulary
+
+::card{type=recall}
+Q: What does “secure coding principles” mean here?
+A: rules for writing code that is safe from attacks _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What does “code reviews” mean here?
+A: checking code for errors and security flaws _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What does “DevSecOps pipelines” mean here?
+A: combining development, security, and operations to make software faster and safer _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What does “ethical responsibilities” mean here?
+A: doing the right thing, like telling someone privately about a security flaw you find _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What does “attack surface” mean here?
+A: all the possible ways an unauthorized user can get into a system _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What does “afterthought” mean here?
+A: something considered after the main work is done _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What does “Software Development Lifecycle (SDLC)” mean here?
+A: the process of planning, creating, testing, and deploying software _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What does “security vulnerability” mean here?
+A: a weakness or flaw that can be exploited by an attacker _Source: Paragraph 1_
+::
+
+## Core ideas
+
+::card{type=recall}
+Q: What is Cybersecurity?
+A: Cybersecurity is everyone's job, not just security teams. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What are Developers?
+A: Developers are the first line of defense against cyber threats. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: How would you explain “Integrate security into every step”?
+A: Integrate security into every step: design, coding, and testing. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: How would you explain “Insecure software leads to serious real-world problems”?
+A: Insecure software leads to serious real-world problems and business risks. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What is Secure development?
+A: Secure development is a fundamental business necessity. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What is This page explains why cybersecurity?
+A: This page explains why cybersecurity is a shared responsibility, highlighting the critical role software developers play in building secure applications from the very beginning. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What should you remember about Pasted Content?
+A: Lesson 1: Cybersecurity for Software Developers _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: What is This lesson highlights that cybersecurity?
+A: This lesson highlights that cybersecurity is a shared responsibility. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: How would you explain “It's not just for security teams”?
+A: It's not just for security teams. _Source: Paragraph 1_
+::
+
+::card{type=recall}
+Q: How would you explain “Your choices directly affect how strong and”?
+A: Your choices directly affect how strong and reliable the systems you build are. _Source: Paragraph 1_
+::
+
+## Source
+
+::card{type=reference}
+Title: Pasted Content
+Locator: Paragraph 1
+::

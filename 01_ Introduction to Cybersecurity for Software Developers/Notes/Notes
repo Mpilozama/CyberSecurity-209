@@ -1,0 +1,552 @@
+# Day 1 — Lesson 1
+## Introduction to Cybersecurity for Software Developers
+
+### 1. Lesson Overview
+
+This lesson introduces the role of software developers in cybersecurity.
+
+Its central message is that cybersecurity is a shared responsibility. Developers must consider security throughout the Software Development Lifecycle (SDLC), rather than leaving it exclusively to security teams or addressing it only after deployment.
+
+Developers contribute to application security through:
+- Secure design and architecture.
+- Secure coding.
+- Security testing.
+- Security awareness.
+- Secure development workflows.
+- Responsible handling and disclosure of vulnerabilities.
+
+### 2. Learning Outcomes
+
+By the end of this lesson, you should be able to:
+
+1. Explain why cybersecurity is a shared responsibility and describe the developer's role in reducing vulnerabilities.
+2. Identify common security risks arising during the SDLC.
+3. Explain how insecure development practices contribute to real-world security breaches and organisational impacts.
+4. Apply secure coding principles and practices to mitigate vulnerabilities.
+5. Integrate security into everyday development workflows, including code reviews, testing and DevSecOps pipelines.
+6. Demonstrate awareness of ethical responsibilities, including responsible disclosure when vulnerabilities are discovered.
+
+---
+
+### 3. Fundamental Cybersecurity Concepts
+
+**Cybersecurity:** The practice of protecting computer systems, applications, networks and data against unauthorised access, attacks, damage and disruption.
+
+**Vulnerability:** A weakness in a system that could potentially be exploited by an attacker.
+
+Examples:
+- Weak passwords.
+- Missing access controls.
+- Poor input validation.
+- Exposed sensitive information.
+- Outdated dependencies.
+
+**Attack Surface:** All possible entry points through which an attacker could attempt to access or compromise a system.
+
+Examples:
+- Login pages.
+- APIs.
+- Databases.
+- Third-party libraries.
+- External integrations.
+
+**API (Application Programming Interface):** A mechanism that allows different software applications or systems to communicate.
+
+**Dependencies:** External libraries, packages or components used by an application.
+
+**Integrations:** Connections between an application and external systems or services.
+
+Important relationship:
+More components, dependencies, APIs and integrations can create more potential entry points, increasing an application's attack surface.
+
+---
+
+### 4. Developers as the First Line of Defence
+
+Cybersecurity is a shared responsibility.
+
+Historically, security was often treated as a separate activity performed by specialised security teams towards the end of development or after deployment.
+
+Modern software development requires security to be integrated from the beginning.
+
+Developers are considered the first line of defence because their design, coding and implementation decisions directly affect application security.
+
+#### Why has the developer's security role become more important?
+
+**1. Increased Attack Surface**
+- Modern applications use multiple dependencies, APIs and integrations.
+- These create additional potential entry points for attackers.
+
+**2. Faster Development Cycles**
+- Agile and DevOps practices accelerate software development.
+- Security must be integrated early to keep pace with development.
+
+**3. Cost of Late-Stage Fixes**
+- Fixing vulnerabilities after production release can be much more expensive.
+- The lesson cites an estimate of 30–100 times the cost of fixing vulnerabilities during initial design.
+
+**4. Regulatory Requirements**
+- Organisations must comply with data protection and security regulations.
+- GDPR is given as an example.
+- Security must be considered throughout development.
+
+---
+
+### 5. Five Key Security Responsibilities of Developers
+
+**1. Cybersecurity Ambassadors**
+
+Developers help connect development teams with security teams.
+
+Responsibilities:
+- Promote security awareness.
+- Advocate secure development practices.
+- Translate security requirements into development tasks.
+- Guide and mentor other developers.
+- Promote a security-first mindset.
+
+**2. Security-Conscious Development**
+
+Developers must understand the security implications of their work.
+
+They should understand common attack vectors, technology-specific threats and the potential business impact of vulnerabilities.
+
+Examples of attacks and vulnerabilities:
+
+- **SQL Injection:** Manipulating database queries through improperly handled input.
+- **Cross-Site Scripting (XSS):** Injecting malicious scripts into content that is delivered to users' browsers.
+- **Authentication Bypass:** Getting past identity verification without successfully proving one's identity.
+- **Prototype Pollution:** A JavaScript-related vulnerability involving unintended modification of object properties through prototypes.
+- **IAM Misconfiguration:** Incorrect identity or permission settings that can expose resources or grant excessive access.
+
+**3. Secure Architecture and Design**
+
+Security must be considered during the planning and design of software.
+
+Important concepts:
+
+- **Security by Design:** Incorporating security into architectural and design decisions from the beginning.
+- **Secure API Design:** Designing APIs with appropriate authentication, authorization and data validation.
+- **Data Protection:** Protecting sensitive information through encryption, access controls and secure handling procedures.
+
+**4. Secure Coding Implementation**
+
+Developers must write code that prevents exploitable vulnerabilities.
+
+Important practices:
+
+- **Input Validation:** Checking whether supplied input meets expected requirements.
+- **Input Sanitization:** Safely handling or cleaning input to prevent unwanted content from causing problems.
+- **Type Checking:** Ensuring input is of the expected data type.
+- **Output Encoding:** Safely representing output so that browsers do not interpret untrusted content as executable code.
+- **Error Handling:** Managing errors without exposing sensitive system information.
+- **Dependency Management:** Tracking, scanning and updating third-party libraries and packages.
+
+**5. Security Testing Integration**
+
+Security testing must happen throughout development.
+
+Practices include:
+- Security-focused unit tests.
+- Testing access restrictions.
+- Testing input validation.
+- Automated security testing.
+- Security-focused code reviews.
+- Integrating security tools into CI/CD pipelines.
+
+---
+
+### 6. Software Development Lifecycle (SDLC)
+
+SDLC stands for Software Development Lifecycle.
+
+It describes the process of creating, releasing and maintaining software.
+
+Simplified stages:
+
+1. **Planning:** Determine requirements and what needs to be built.
+2. **Design:** Plan the application's architecture and behaviour.
+3. **Development:** Implement the application by writing code.
+4. **Testing:** Verify that the application works and identify defects.
+5. **Deployment:** Release the application.
+6. **Maintenance:** Monitor, update, fix and improve the application.
+
+Security must be considered throughout all stages.
+
+---
+
+### 7. Shift-Left Security
+
+**Definition:**
+
+Shift-left security is the practice of moving security-related activities to the earliest possible stages of the SDLC.
+
+Traditional approach:
+Security is considered late in development or after deployment.
+
+Shift-left approach:
+Security is considered during requirements gathering, planning, design and development, and continues throughout the lifecycle.
+
+#### Four Benefits of Shift-Left Security
+
+1. **Reduced Costs:** Early vulnerability detection and remediation are generally cheaper.
+2. **Faster Time to Market:** Security issues are less likely to cause last-minute delays.
+3. **Improved Security Outcomes:** Applications become more secure by design.
+4. **Developer Empowerment:** Developers gain the knowledge, tools and ownership to prevent vulnerabilities.
+
+Key distinction:
+Shift-left does not mean security only happens at the beginning. It means starting earlier and maintaining security throughout development.
+
+---
+
+### 8. DevOps and DevSecOps
+
+**DevOps:**
+
+A set of practices that brings development and operations together to improve software development, delivery and maintenance.
+
+**DevSecOps:**
+
+The integration of security into the entire DevOps process.
+
+Security becomes part of development, testing, delivery, deployment and monitoring rather than remaining a separate activity.
+
+#### CI/CD
+
+CI/CD stands for Continuous Integration and Continuous Delivery/Deployment.
+
+It describes practices and automated processes used to integrate code changes, test software and prepare or release applications.
+
+DevSecOps integrates security checks into these pipelines.
+
+#### Three Key Principles of DevSecOps
+
+**1. Automation of Security Processes**
+- Automate security testing.
+- Integrate SAST, DAST and dependency scanning into CI/CD.
+- Scan infrastructure configurations.
+- Automate compliance checks.
+
+**2. Continuous Security Monitoring**
+- Monitor applications and infrastructure.
+- Detect vulnerabilities and misconfigurations.
+- Use security metrics and dashboards.
+- Integrate development teams into incident response.
+
+**3. Cultural Transformation**
+- Establish shared security responsibility.
+- Treat security as everyone's responsibility.
+- Manage security policies and configurations as version-controlled code.
+- Promote continuous learning and improvement.
+
+---
+
+### 9. Security-First Culture
+
+**Definition:**
+
+A security-first culture is an organisational mindset in which security is prioritised in everyday decisions, behaviours and development practices.
+
+It involves more than simply installing security tools.
+
+#### Three Characteristics of a Strong Security Culture
+
+**1. Proactive Security Mindset**
+- Anticipate potential security problems.
+- Evaluate security implications before implementing features.
+- Conduct regular risk assessments.
+- Learn from previous incidents and near-misses.
+
+**2. Open Communication About Security**
+- Encourage people to report vulnerabilities and mistakes.
+- Create a blame-free reporting environment.
+- Share security knowledge.
+- Encourage collaboration between development, security and operations teams.
+
+**3. Security Education and Training**
+- Provide regular security training.
+- Use practical exercises, simulations and labs.
+- Encourage certifications and professional development.
+- Tailor training to people's roles and responsibilities.
+
+#### Three Ways to Implement Security Culture
+
+**1. Leadership Support**
+- Visible management support.
+- Adequate time, budget and tools.
+- Investment in security initiatives.
+- Recognition of good security practices.
+
+**2. Training and Education Programs**
+- Role-based training.
+- Regular updates on emerging threats.
+- Workshops, practical exercises and simulations.
+- Continuous learning.
+
+**3. Integration with Development Processes**
+- Include security requirements in planning and design.
+- Conduct secure code reviews.
+- Integrate automated security testing into CI/CD.
+- Make security part of normal development workflows.
+
+---
+
+### 10. Developer Security Toolkit
+
+Developers need knowledge in three essential security domains.
+
+**A. Application Security Fundamentals**
+
+Focuses on protecting software applications.
+
+Includes:
+- Common application vulnerabilities.
+- OWASP Top 10.
+- Secure coding practices.
+- Authentication.
+- Authorization.
+- Fine-grained access controls.
+- Multi-factor authentication (MFA).
+
+**B. Infrastructure Security**
+
+Focuses on protecting the systems and environments that support applications.
+
+Includes:
+- Cloud security.
+- Identity and Access Management (IAM).
+- Container security.
+- Kubernetes security.
+- Network security.
+- Secure communication protocols such as TLS.
+
+**C. Data Protection**
+
+Focuses on protecting sensitive information throughout its lifecycle.
+
+Includes:
+- Encryption at rest.
+- Encryption in transit.
+- Privacy compliance.
+- Privacy by design.
+- Secure collection, storage, processing and disposal of data.
+
+Important terminology:
+
+**Data at Rest:** Data stored in databases, filesystems or other storage locations.
+
+**Data in Transit:** Data moving between systems or across networks.
+
+**IAM:** Identity and Access Management; managing identities and controlling what resources they can access.
+
+**TLS:** Transport Layer Security; a protocol used to protect communication over networks.
+
+**GDPR:** General Data Protection Regulation.
+
+**CCPA:** California Consumer Privacy Act.
+
+---
+
+### 11. Security Testing Tools
+
+Know the purpose and differences between the four testing categories.
+
+**1. SAST — Static Application Security Testing**
+
+Purpose:
+Analyses source code, bytecode or binary code without executing the application.
+
+Used to:
+- Detect potential vulnerabilities in code.
+- Identify security issues early.
+- Provide feedback during development.
+
+Examples:
+- SonarQube.
+- Checkmarx.
+- Veracode Static Analysis.
+
+Remember:
+SAST = Static code analysis.
+
+**2. DAST — Dynamic Application Security Testing**
+
+Purpose:
+Tests a running application by simulating external attacks.
+
+Used to:
+- Identify runtime vulnerabilities.
+- Detect authentication flaws.
+- Identify server configuration issues.
+
+Examples:
+- OWASP ZAP.
+- Burp Suite.
+- Rapid7 AppSpider.
+
+Remember:
+DAST = Testing a running application from the outside.
+
+**3. SCA — Software Composition Analysis**
+
+Purpose:
+Identifies known vulnerabilities in third-party libraries and dependencies.
+
+Used to:
+- Check open-source components.
+- Identify vulnerable dependencies.
+- Manage software supply-chain risks.
+
+Examples:
+- Snyk.
+- WhiteSource (now Mend).
+- Black Duck.
+
+Remember:
+SCA = Dependency security analysis.
+
+**4. IAST — Interactive Application Security Testing**
+
+Purpose:
+Instruments a running application and analyses it from inside while it executes.
+
+Used to:
+- Combine aspects of static and dynamic testing.
+- Provide runtime security feedback.
+- Identify vulnerabilities during execution.
+
+Examples:
+- Contrast Security.
+- Seeker.
+- Hdiv Detection.
+
+Remember:
+IAST = Instrumented application testing from inside.
+
+#### Comparison Table
+
+| Tool | What is analysed? | Does the application run? |
+|---|---|---|
+| SAST | Source code, bytecode or binary code | No |
+| DAST | Running application from outside | Yes |
+| SCA | Third-party dependencies | Not required |
+| IAST | Instrumented running application | Yes |
+
+---
+
+### 12. Base44 API Vulnerability Exercise
+
+The curriculum asks you to analyse an incident in which private enterprise applications were exposed through publicly visible application IDs.
+
+The exercise has three parts.
+
+**Part 1: Trace the Root Cause**
+
+Identify the developer actions or design decisions that led to the exposure.
+
+Consider:
+- Application access controls.
+- API design.
+- Authentication and authorization.
+- How application IDs were handled.
+- Whether security was considered during development.
+
+**Part 2: Recommend Secure Practices**
+
+Suggest practices that could have prevented the exposure.
+
+The curriculum specifically mentions:
+- Input validation.
+- Access control.
+- Secure API design.
+
+Explain what each practice does and how it could reduce the risk.
+
+**Part 3: Reflect on Developer Accountability**
+
+Discuss how developer decisions influence organisational security.
+
+Consider:
+- User privacy.
+- Protection of sensitive information.
+- Organisational reputation.
+- Business operations.
+- Ethical responsibility.
+- The consequences of insecure development decisions.
+
+Important distinction:
+An application ID identifies a resource. Knowing the ID does not, by itself, establish that someone has permission to access that resource.
+
+The exercise requires you to analyse the incident, not simply repeat that the ID was publicly visible.
+
+---
+
+### 13. Important Terms to Memorise
+
+| Term | Meaning |
+|---|---|
+| Cybersecurity | Protecting systems, applications, networks and data from attacks and unauthorised access. |
+| Vulnerability | A weakness that could be exploited. |
+| Attack Surface | All possible entry points into a system. |
+| API | Allows different software systems to communicate. |
+| Dependency | An external library or package used by an application. |
+| Integration | A connection between systems or services. |
+| SDLC | Software Development Lifecycle. |
+| Security by Design | Incorporating security into design decisions from the beginning. |
+| Shift-Left Security | Moving security activities to earlier SDLC stages. |
+| DevOps | Practices combining development and operations. |
+| DevSecOps | Integrating security throughout DevOps. |
+| CI/CD | Continuous Integration and Continuous Delivery/Deployment. |
+| Authentication | Verifying someone's identity. |
+| Authorization | Determining what an authenticated identity is permitted to access or do. |
+| Input Validation | Checking whether supplied input meets expected requirements. |
+| Input Sanitization | Safely handling or cleaning input. |
+| Output Encoding | Representing output safely to prevent unintended interpretation by the browser. |
+| IAM | Identity and Access Management. |
+| SAST | Static Application Security Testing. |
+| DAST | Dynamic Application Security Testing. |
+| SCA | Software Composition Analysis. |
+| IAST | Interactive Application Security Testing. |
+| Data at Rest | Stored data. |
+| Data in Transit | Data being transmitted. |
+| OWASP | Open Worldwide Application Security Project. |
+| XSS | Cross-Site Scripting. |
+
+---
+
+### 14. High-Priority Assessment Revision
+
+Make sure you can explain these without looking at your notes:
+
+1. Why is cybersecurity a shared responsibility?
+2. Why are developers considered the first line of defence?
+3. What is a vulnerability?
+4. What is an attack surface?
+5. How do APIs, dependencies and integrations increase potential attack surfaces?
+6. What are the four reasons the developer's security role has evolved?
+7. What are the five key security responsibilities of developers?
+8. What is the SDLC?
+9. What is Shift-Left Security?
+10. What are the four benefits of Shift-Left Security?
+11. What is the difference between DevOps and DevSecOps?
+12. What are the three principles of DevSecOps?
+13. What are the three characteristics of a strong security culture?
+14. How can an organisation implement a security-first culture?
+15. What are the three essential security knowledge areas?
+16. What is the difference between authentication and authorization?
+17. What is the difference between data at rest and data in transit?
+18. What is the difference between SAST, DAST, SCA and IAST?
+19. What is the purpose of security testing in a CI/CD pipeline?
+20. Why should a publicly visible application ID not automatically grant access to a private application?
+
+### 15. Important Distinctions
+
+These are easy to confuse:
+
+- **Authentication vs Authorization:** Authentication verifies identity; authorization determines permissions.
+- **Vulnerability vs Attack Surface:** A vulnerability is a weakness; an attack surface is the collection of possible entry points.
+- **Shift-Left vs DevSecOps:** Shift-left moves security activities earlier; DevSecOps integrates security throughout the DevOps process.
+- **SAST vs DAST:** SAST analyses code without running the application; DAST tests a running application.
+- **SCA vs IAST:** SCA checks third-party dependencies; IAST analyses an instrumented running application.
+- **Data at Rest vs Data in Transit:** Stored data versus data being transmitted.
+- **Security Testing vs Functional Testing:** Functional testing checks whether features work; security testing checks whether the application is protected against security weaknesses.

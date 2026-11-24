@@ -1,0 +1,505 @@
+# MODULE 209: CYBERSECURITY
+
+## DAY 1 — LESSON 1
+
+### CASE STUDY: BASE44 API VULNERABILITY INCIDENT
+
+**Student:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Date:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Module:** 209 — Cybersecurity
+
+**Exercise:** Structured Case Study Analysis
+
+**Status:** In Progress
+
+---
+
+# 1. CASE STUDY INTRODUCTION
+
+## 1.1 What is Base44?
+
+Base44 is an AI-powered application development platform.
+
+It allows users to create software applications by describing what they want in ordinary language, rather than writing all the application code themselves.
+
+Businesses can use platforms like Base44 to develop internal applications for their employees and organisations.
+
+Examples include:
+
+- Employee management systems.
+- Internal company applications.
+- Business information systems.
+- Company knowledge bases.
+
+**Important:** Base44 is a platform name, not a networking or cybersecurity term.
+
+## 1.2 What happened?
+
+In July 2025, cybersecurity researchers from Wiz discovered a vulnerability affecting applications built using Base44.
+
+The vulnerability involved the platform's API and user registration process.
+
+Private enterprise applications were supposed to restrict access to authorised users.
+
+However, researchers discovered that someone who knew a private application's publicly visible application ID could potentially register an account and gain access without being properly authorised.
+
+This meant that private applications could be exposed to unauthorised access.
+
+## 1.3 Timeline
+
+| Date                            | Event                                         |
+| ------------------------------- | --------------------------------------------- |
+| 9 July 2025                     | Wiz discovered the vulnerability.             |
+| July 2025                       | Wiz reported the vulnerability to Base44/Wix. |
+| Within 24 hours of notification | The vulnerability was fixed.                  |
+| 29 July 2025                    | Wiz published its investigation.              |
+
+**Important distinction:** The vulnerability created a risk of unauthorised access. Do not automatically assume that confirmed data theft occurred. Wix reported that it found no evidence of malicious exploitation.
+
+## 1.4 Original Research
+
+Research source:
+
+Wiz — Critical Vulnerability in Base44
+
+[https://www.wiz.io/blog/critical-vulnerability-base44](https://www.wiz.io/blog/critical-vulnerability-base44)
+
+Use this source when you need to verify technical details about the incident.
+
+---
+
+# 2. TECHNICAL BACKGROUND
+
+Before analysing the incident, understand the following terminology.
+
+## 2.1 API (Application Programming Interface)
+
+An API allows different software applications or components to communicate with each other.
+
+For example:
+
+A mobile application might communicate with a server through an API to retrieve user information.
+
+**My understanding:**
+
+[Write your explanation here.]
+
+## 2.2 Application ID (app_id)
+
+An application ID is an identifier assigned to an application.
+
+Think of it as a reference number used to identify a particular application.
+
+An application ID does not automatically prove that someone has permission to access that application.
+
+**My understanding:**
+
+[Write your explanation here.]
+
+## 2.3 Authentication
+
+Authentication is the process of verifying someone's identity.
+
+Example:
+
+Logging into an account using a username and password.
+
+**My understanding:**
+
+[Write your explanation here.]
+
+## 2.4 Authorization
+
+Authorization determines what an authenticated user is allowed to access or do.
+
+Example:
+
+An employee may be allowed to access their own HR information but not another employee's confidential records.
+
+**My understanding:**
+
+[Write your explanation here.]
+
+## 2.5 OTP (One-Time Password)
+
+An OTP is a temporary verification code used to confirm an action or identity.
+
+Example:
+
+Receiving a six-digit code through email to verify an account.
+
+**My understanding:**
+
+[Write your explanation here.]
+
+## 2.6 Access Control
+
+Access control determines who is allowed to access specific applications, systems, information or resources.
+
+**My understanding:**
+
+[Write your explanation here.]
+
+## 2.7 Vulnerability
+
+A vulnerability is a weakness in software, a system or its configuration that could be exploited to compromise security.
+
+**My understanding:**
+
+[Write your explanation here.]
+
+## 2.8 Unauthorized Access
+
+Unauthorized access occurs when someone accesses a system, application or information without the necessary permission.Introduction to Cybersecurity for Software Developers
+
+**My understanding:**
+
+[Write your explanation here.]
+
+---
+
+# 3. UNDERSTANDING THE INCIDENT
+
+## 3.1 What was supposed to happen?
+
+Private enterprise applications should only have been accessible to authorised users.
+
+Users should have needed the appropriate permission to register for and access these applications.
+
+**In my own words:**
+
+[Explain how access to a private application should work.]
+
+## 3.2 What actually happened?
+
+Researchers discovered weaknesses in Base44's registration and verification API endpoints.
+
+The system did not properly enforce the necessary authorization checks during registration.
+
+As a result, someone who knew a private application's ID could potentially register an account and gain access without an invitation.
+
+**In my own words:**
+
+[Explain what went wrong.]
+
+## 3.3 Why was this a security problem?
+
+Consider:
+
+- Confidential company information.
+- Employee information.
+- Private business applications.
+- Unauthorised users.
+- Weak access controls.
+- Organisational trust.
+
+**My explanation:**
+
+[Explain the potential consequences.]
+
+---
+
+# 4. EXERCISE 1 — TRACE THE ROOT CAUSE
+
+### Task
+
+Identify and explain the specific developer actions or design decisions during the software development lifecycle that led to the exposure of private enterprise applications via publicly visible application IDs.
+
+## 4.1 Identify the root cause
+
+Guiding questions:
+
+1. Which part of Base44's system contained the vulnerability?
+2. What was wrong with the registration process?
+3. Why was knowing the application ID insufficient to prove permission?
+4. What security check should have been performed?
+5. Why was the vulnerability possible?
+
+**My answer:**
+
+[Write your explanation here.]
+
+## 4.2 Identify the security weaknesses
+
+Consider the following areas:
+
+| Security area  | What should I investigate?                               | My findings |
+| -------------- | -------------------------------------------------------- | ----------- |
+| Authentication | Was the user's identity properly verified?               |             |
+| Authorization  | Was the user actually allowed to access the application? |             |
+| Access control | Were private applications properly restricted?           |             |
+| API security   | Did the API enforce the correct security checks?         |             |
+| Registration   | Could unauthorised users register?                       |             |
+
+## 4.3 Connect the incident to the Software Development Life Cycle (SDLC)
+
+The Software Development Life Cycle describes the stages involved in building and maintaining software.
+
+Consider these stages:
+
+| SDLC stage     | Question to consider                             |
+| -------------- | ------------------------------------------------ |
+| Planning       | Were security requirements identified?           |
+| Design         | Was the access-control system designed securely? |
+| Implementation | Were security checks correctly implemented?      |
+| Testing        | Were unauthorised registration attempts tested?  |
+| Maintenance    | Were vulnerabilities identified and fixed?       |
+
+**My analysis:**
+
+[Explain which stages may have needed stronger security consideration. Distinguish confirmed weaknesses from your own recommendations or inferences.]
+
+---
+
+# 5. EXERCISE 2 — RECOMMEND SECURE PRACTICES
+
+### Task
+
+Compile a detailed list of secure development practices — such as input validation, access control and secure API design — that could have prevented the breach.
+
+For each practice, explain:
+
+1. What it means.
+2. How it works.
+3. How it could have prevented the Base44 vulnerability.
+
+## 5.1 Input Validation
+
+**Definition:**
+
+[Explain what input validation means.]
+
+**How it could help prevent the incident:**
+
+[Your explanation.]
+
+## 5.2 Authentication
+
+**Definition:**
+
+[Explain authentication.]
+
+**How it could help prevent the incident:**
+
+[Your explanation.]
+
+## 5.3 Authorization
+
+**Definition:**
+
+[Explain authorization.]
+
+**How it could help prevent the incident:**
+
+[Your explanation.]
+
+## 5.4 Access Control
+
+**Definition:**
+
+[Explain access control.]
+
+**How it could help prevent the incident:**
+
+[Your explanation.]
+
+## 5.5 Secure API Design
+
+**Definition:**
+
+[Explain what makes an API secure.]
+
+**How it could help prevent the incident:**
+
+[Your explanation.]
+
+## 5.6 Secure Registration and Account Verification
+
+**Definition:**
+
+[Explain what a secure registration process should do.]
+
+**How it could help prevent the incident:**
+
+[Your explanation.]
+
+## 5.7 Security Testing
+
+**Definition:**
+
+[Explain how developers test software for security weaknesses.]
+
+**How it could help prevent the incident:**
+
+[Your explanation.]
+
+## 5.8 Additional Secure Development Practices
+
+Identify at least three additional practices.
+
+| Practice | What it means | How it improves security |
+| -------- | ------------- | ------------------------ |
+| 1.       |               |                          |
+| 2.       |               |                          |
+| 3.       |               |                          |
+
+---
+
+# 6. EXERCISE 3 — DEVELOPER ACCOUNTABILITY
+
+### Task
+
+Articulate how developer responsibility influences an organisation's overall security posture.
+
+Consider the ethical and operational implications of insecure coding decisions.
+
+## 6.1 What is developer accountability?
+
+**My explanation:**
+
+[Explain what responsibility developers have when building software.]
+
+## 6.2 Why are developers responsible for security?
+
+Consider:
+
+- Developers make architectural and implementation decisions.
+- Developers implement authentication and authorization.
+- Developers handle sensitive information.
+- Developers decide how applications interact with APIs.
+- Developers are responsible for considering security throughout development.
+
+**My explanation:**
+
+[Explain why security cannot simply be left to a dedicated security team.]
+
+## 6.3 Ethical implications
+
+Consider:
+
+- User privacy.
+- Confidential information.
+- Trust.
+- Potential harm to customers and employees.
+- Professional responsibility.
+
+**My answer:**
+
+[Explain the ethical consequences of insecure development.]
+
+## 6.4 Operational implications
+
+Consider:
+
+- Financial losses.
+- Reputational damage.
+- Legal and regulatory consequences.
+- Business disruption.
+- I ncident response costs.
+- Loss of customer trust.
+
+**My answer:**
+
+[Explain how insecure development can affect an organisation.]
+
+## 6.5 Personal reflection
+
+As a future software developer:
+
+Wha t responsibility do you believe you have to ensure that the software you build is secure?
+
+**My reflection:**
+
+[Write your own reflection.]
+
+---
+
+# 7 . FINAL CASE STUDY CONCLUSION
+
+Summarise what you learned from the Base44 incident.
+
+Your conclusion should address:
+
+1. What happened?
+2. What was the main security weakness?
+3.  What could developers have done differently?
+4. Why is security a shared responsibility?
+5. What lesson will you take into your future development work?
+
+**My conclusion:**
+
+[Write your conclusion here.]
+
+---
+
+# 8. KNOWLEDGE CHECK
+
+Complete these questions after finishing the case study.
+
+1. What is Base44?
+
+Answer:
+
+2. What is an API?
+
+Answer:
+
+3. What is the difference between authentication and authorization?
+
+Answer:
+
+4. Why is an application ID not sufficient proof of permission?
+
+Answer:
+
+5. What is a vulnerability?
+
+Answer:
+
+6. What is access control?
+
+Answer:
+
+7. What is the purpose of security testing?
+
+Answer:
+
+8. Why should security be considered during software design rather than only after development?
+
+Answer:
+
+9. What is the relationship between developers and organisational cybersecurity?
+
+Answer:
+
+10. What is the biggest lesson from the Base44 incident?
+
+Answer:
+
+---
+
+# 9. COMPLETION CHECKLIST
+
+Before submitting, check that:
+
+- [ ] I understand what Base44 is.
+- [ ] I understand what happened in the incident.
+- [ ] I can explain the root cause.
+- [ ] I understand authentication and authorization.
+- [ ] I can explain why application IDs should not grant access.
+- [ ] I have recommended secure development practices.
+- [ ] I have explained developer accountability.
+- [ ] I have discussed ethical and operational consequences.
+- [ ] I have completed my conclusion.
+- [ ] I have checked my answers for technical accuracy.
+- [ ] I have referenced my research sources.
+
+---
+
+**END OF CASE STUDY WORKSHEET**
+
+Module 209 — Cybersecurity
+
+WeThinkCode
